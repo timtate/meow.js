@@ -3,6 +3,8 @@
 
 I thought it would be fun to convert [hugovk's](https://github.com/hugovk/meow.py) meow.py to JavaScript.
 
+Demo can be viewed [here](http://timtate.github.io/meow.js/)
+
 Usage
 -----
     import common.js, and meow.js at the least. there's also nope.js that converts to "no" instead of meow.
