@@ -6,6 +6,11 @@ function getRandomInt(min, max) { // taken from http://stackoverflow.com/questio
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function pickRandom(num) {
+    if ( getRandomInt( 1, num ) == 1 ) return true;
+    return false;
+}
+
 function is_word(thing) {
     'use strict';
     var reg = new RegExp("\\w+");

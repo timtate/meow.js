@@ -26,7 +26,8 @@
     <br>
     <div class="row">
         <div class="large-12 columns text-center">
-        <h4>Convert any text to meows or nos, keeping capitalization and punctuation intact.</h4>
+        <h4>Convert any text to meows, nos, derps etc.</h4>
+        <h4>Keeps word length, capitalization, and punctuation intact.</h4>
         <a href="https://github.com/timtate/meow.js/blob/gh-pages/jnglb10.txt">Here's The Jungle Book</a>, for some sample text to try out.
         <br><br>
         </div>
@@ -51,9 +52,11 @@ The tiger's roar filled the cave with thunder.  Mother Wolf shook herself clear 
         </div>
     </div>
     <div class="row">
-        <div class="large-6 columns">
+        <div class="large-12 columns">
             <button id="meowButton" type="button" class="radius">Meow It!</button>
             <button id="nopeButton" type="button" class="radius">Nope It!</button>
+            <button id="derpButton" type="button" class="radius">Derp It!</button>
+            <button id="fuckButton" type="button" class="radius">Fuck It!</button>
         </div>
     </div>
 
@@ -78,6 +81,8 @@ The tiger's roar filled the cave with thunder.  Mother Wolf shook herself clear 
     <script src="common.js"></script>
     <script src="meow.js"></script>
     <script src="nope.js"></script>
+    <script src="derp.js"></script>
+    <script src="fuck.js"></script>
     <script>
         $(document).foundation();
         var doc = document.documentElement;
@@ -91,6 +96,16 @@ The tiger's roar filled the cave with thunder.  Mother Wolf shook herself clear 
             $("#nopeButton").on('click', function(event){
                 var input = $("#inputText").val();
                 $("#outputText").val(nopify(input));
+            })
+
+            $("#derpButton").on('click', function(event){
+                var input = $("#inputText").val();
+                $("#outputText").val(derpify(input));
+            })
+
+            $("#fuckButton").on('click', function(event){
+                var input = $("#inputText").val();
+                $("#outputText").val(fuckify(input));
             })
 
         });

@@ -19,11 +19,17 @@ function nope(word) {
     }
 
     if (length === 3) {
-        return capify("nuh", word);
+        if (pickRandom(4)){
+            return capify("nuh", word);
+        }
+        return capify("noo", word);
     }
 
     if (length === 4) {
-        return capify("nope", word);
+        if (pickRandom(4)){
+            return capify("nope", word);
+        }
+        return capify("nooo", word);
     }
 
     // Words longer than four will have:
@@ -32,7 +38,7 @@ function nope(word) {
     //  * middle with a random number of Ns, then some Os
 
     // Number of NOs:
-    var enohsCount = length - 2; // accounting for the "m" and the "w"
+    var enohsCount = length - 2; // accounting for the first "n" and "o"
     // Number of Ns:
     var nsCount = getRandomInt(1, enohsCount);
     // Number of Os:
